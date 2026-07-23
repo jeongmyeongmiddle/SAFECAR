@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.app-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 24px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    padding: 28px 24px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 1.4rem;
+    color: #191f28;
+    margin-bottom: 6px;
+}
+
+.header p {
+    font-size: 0.9rem;
+    color: #8b95a1;
+}
+
+/* 상태 알림 판 */
+.status-box {
+    padding: 24px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+}
+
+/* 정상 통행 상태 */
+.status-normal {
+    background-color: #e8f7ee;
+    border: 2px solid #28a745;
+    color: #1e7e34;
+}
+
+/* 차단 / 우회 상태 (경고 애니메이션 포함) */
+.status-detour {
+    background-color: #ffeeee;
+    border: 2px solid #dc3545;
+    color: #bd2130;
+    animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(220, 53, 69, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+}
+
+.status-icon {
+    font-size: 3rem;
+    margin-bottom: 8px;
+}
+
+.status-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.status-desc {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* 시뮬레이션 제어판 */
+.control-panel {
+    background: #f9fafb;
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid #e5e8eb;
+}
+
+.control-panel label {
+    display: block;
+    font-size: 0.85rem;
+    color: #6b7684;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: 14px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-normal {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-normal:hover {
+    background-color: #218838;
+}
+
+.btn-detour {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-detour:hover {
+    background-color: #c82333;
+}
+
+.audio-notice {
+    margin-top: 16px;
+    font-size: 0.8rem;
+    color: #abb0b7;
+}
